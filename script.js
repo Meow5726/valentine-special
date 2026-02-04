@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 msg.style.display = "none";
                 gift.style.display = "block";
                 gift.style.opacity = "1";
-            }, 500);
+            }, 1000);
         }, 1500);
     });
 
@@ -73,4 +73,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-
