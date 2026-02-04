@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: #c2185b;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Falling hearts */
+.heart{
+    position: absolute;
+    top: -10px;
+    color: white;
+    animation: fall linear infinite;
+    opacity: 0.8;
+    text-shadow: 0 0 10px white;
+}
+
+@keyframes fall{
+    to{
+        transform: translateY(110vh);
+    }
+}
+
+/* Main box */
+.valentine-box{
+    background: #ffd1dc;
+    padding: 45px 55px;
+    border-radius: 30px;
+    width: 440px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.6);
+}
+
+/* Pink sprinkles */
+.valentine-box::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(#ff8fab 2px, transparent 2px);
+    background-size: 18px 18px;
+    opacity: 0.4;
+    border-radius: 30px;
+    pointer-events: none; /* ⭐ THIS FIXES IT */
+}
+
+
+h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 42px;
+    color: #b0004b;
+    margin-bottom: 35px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Buttons area */
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Heart buttons (BIG + readable) */
+.heart-btn{
+    width: 120px;
+    height: 110px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background: hotpink;
+    clip-path: path("M60 100s-40-30-40-60 26-40 40-20 40-20 40 20-40 60-40 60z");
+    transition: all 0.3s ease;
+}
+
+#yes{
+    background: #ff4081;
+}
+
+#no{
+    background: #e91e63;
+}
+
+/* Message */
+#message{
+    display: none;
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    color: #ad1457;
+}
+
+/* Gift & Teddy */
+#gift, #teddy{
+    display: none;
+    margin-top: 20px;
+}
+
+#gift img, #teddy img{
+    width: 230px;
+    cursor: pointer;
+}
+
+#final-text{
+    display: none;
+    font-family: 'Pacifico', cursive;
+    font-size: 34px;
+    color: #ad1457;
+    margin-top: 15px;
+}
