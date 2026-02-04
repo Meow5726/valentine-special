@@ -69,7 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             finalText.style.display = "block";
             finalText.style.opacity = "1";
-        }, 400);
+        }, 700);
     });
 
 });
+
